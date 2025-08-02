@@ -9,17 +9,15 @@ import {
     MakerTraits,
     ZX,
     SettlementPostInteractionData,
-    now,
-    NetworkEnum
+    now
 } from '@1inch/fusion-sdk'
 import assert from 'assert'
 import {CrossChainOrderInfo, Details, EscrowParams, Extra} from './types'
 import {InnerOrder} from './inner-order'
 import {EscrowExtension} from './escrow-extension'
 import {TRUE_ERC20} from '../deployments'
-import {isSupportedChain, SupportedChain} from '../chains'
+import {isSupportedChain, SupportedChain, NetworkEnum} from '../chains'
 import {Immutables} from '../immutables'
-
 export class CrossChainOrder {
     private inner: InnerOrder
 

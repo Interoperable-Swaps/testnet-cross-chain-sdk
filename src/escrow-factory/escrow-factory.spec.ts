@@ -1,7 +1,11 @@
-import {Address, NetworkEnum} from '@1inch/fusion-sdk'
+import {Address} from '@1inch/fusion-sdk'
+
 import {keccak256} from 'ethers'
+
 import {EscrowFactoryFacade} from './escrow-factory-facade'
 import {EscrowFactoryZksync} from './escrow-factory-zksync'
+import {NetworkEnum} from '../chains'
+
 import {DstImmutablesComplement, Immutables} from '../immutables'
 import {HashLock, TimeLocks} from '../cross-chain-order'
 

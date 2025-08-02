@@ -1,9 +1,11 @@
-import {HttpProviderConnector, NetworkEnum} from '@1inch/fusion-sdk'
+import {HttpProviderConnector} from '@1inch/fusion-sdk'
 import {QuoterApi} from './quoter.api'
 import {QuoterRequest} from './quoter.request'
+
 import {Quote} from './quote'
 import {PresetEnum, QuoterResponse} from './types'
 import {QuoterCustomPresetRequest} from './quoter-custom-preset.request'
+import {NetworkEnum} from '../../chains'
 
 describe('Quoter API', () => {
     let httpProvider: HttpProviderConnector

@@ -1,4 +1,6 @@
-import {Address, NetworkEnum} from '@1inch/fusion-sdk'
+import {Address} from '@1inch/fusion-sdk'
+
+import {NetworkEnum} from './chains'
 
 const TrueERC20 = new Address('0xda0000d4000015a526378bb6fafc650cea5966f8')
 const ZKTrueERC20 = new Address('0xd66097c27eb8dee404bac235737932260edc6f3b')
@@ -16,7 +18,9 @@ export const TRUE_ERC20 = {
     [NetworkEnum.ZKSYNC]: ZKTrueERC20,
     [NetworkEnum.LINEA]: TrueERC20,
     [NetworkEnum.SONIC]: TrueERC20,
-    [NetworkEnum.UNICHAIN]: TrueERC20
+    [NetworkEnum.UNICHAIN]: TrueERC20,
+    [NetworkEnum.SEPOLIA]: new Address(''),
+    [NetworkEnum.TEZOS]: new Address('')
 }
 
 const ESCROW_FACTORY_ADDRESS = new Address(
@@ -51,7 +55,11 @@ export const ESCROW_SRC_IMPLEMENTATION = {
     [NetworkEnum.ZKSYNC]: ESCROW_ZK_SRC_IMPLEMENTATION_ADDRESS,
     [NetworkEnum.LINEA]: ESCROW_SRC_IMPLEMENTATION_ADDRESS,
     [NetworkEnum.SONIC]: ESCROW_SRC_IMPLEMENTATION_ADDRESS,
-    [NetworkEnum.UNICHAIN]: ESCROW_SRC_IMPLEMENTATION_ADDRESS
+    [NetworkEnum.UNICHAIN]: ESCROW_SRC_IMPLEMENTATION_ADDRESS,
+    [NetworkEnum.SEPOLIA]: new Address(
+        '0xa17ddb01f03a42e0070a0e25099cf3d27b705fff '
+    ),
+    [NetworkEnum.TEZOS]: new Address('')
 }
 
 export const ESCROW_DST_IMPLEMENTATION = {
@@ -67,7 +75,11 @@ export const ESCROW_DST_IMPLEMENTATION = {
     [NetworkEnum.ZKSYNC]: ESCROW_ZK_DST_IMPLEMENTATION_ADDRESS,
     [NetworkEnum.LINEA]: ESCROW_DST_IMPLEMENTATION_ADDRESS,
     [NetworkEnum.SONIC]: ESCROW_DST_IMPLEMENTATION_ADDRESS,
-    [NetworkEnum.UNICHAIN]: ESCROW_DST_IMPLEMENTATION_ADDRESS
+    [NetworkEnum.UNICHAIN]: ESCROW_DST_IMPLEMENTATION_ADDRESS,
+    [NetworkEnum.SEPOLIA]: new Address(
+        '0x7490329e69ab8e298a32dc59493034e4d02a5ccf '
+    ),
+    [NetworkEnum.TEZOS]: new Address('')
 }
 
 export const ESCROW_FACTORY = {
@@ -83,5 +95,9 @@ export const ESCROW_FACTORY = {
     [NetworkEnum.ZKSYNC]: ESCROW_ZK_FACTORY_ADDRESS,
     [NetworkEnum.LINEA]: ESCROW_FACTORY_ADDRESS,
     [NetworkEnum.SONIC]: ESCROW_FACTORY_ADDRESS,
-    [NetworkEnum.UNICHAIN]: ESCROW_FACTORY_ADDRESS
+    [NetworkEnum.UNICHAIN]: ESCROW_FACTORY_ADDRESS,
+    [NetworkEnum.SEPOLIA]: new Address(
+        '0x61a32a9263c6ff568c66799a94f8fe09c1db7a66 '
+    ),
+    [NetworkEnum.TEZOS]: new Address('')
 }

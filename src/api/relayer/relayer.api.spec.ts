@@ -1,9 +1,9 @@
-import {HttpProviderConnector, NetworkEnum} from '@1inch/fusion-sdk'
+import {HttpProviderConnector} from '@1inch/fusion-sdk'
 import {RelayerApi} from './relayer.api'
 import {RelayerRequest} from './relayer.request'
 import {RelayerRequestParams} from './types'
 import {getRandomBytes32} from '../../test-utils/get-random-bytes-32'
-
+import {NetworkEnum} from '../../chains'
 describe('Relayer API', () => {
     const httpProvider: HttpProviderConnector = {
         get: jest.fn().mockImplementationOnce(() => {

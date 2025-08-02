@@ -1,5 +1,6 @@
-import {Address, NetworkEnum} from '@1inch/fusion-sdk'
+import {Address} from '@1inch/fusion-sdk'
 import {QuoterRequest} from './quoter.request'
+import {NetworkEnum} from '../../chains'
 
 describe(__filename, () => {
     it('should return error if native currency', () => {

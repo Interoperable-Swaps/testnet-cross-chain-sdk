@@ -1,4 +1,5 @@
-import {HttpProviderConnector, NetworkEnum} from '@1inch/fusion-sdk'
+import {HttpProviderConnector} from '@1inch/fusion-sdk'
+
 import {
     ActiveOrdersResponse,
     EscrowEventAction,
@@ -18,6 +19,8 @@ import {
     OrdersByMakerRequest,
     OrderStatusRequest
 } from './orders.request'
+
+import {NetworkEnum} from '../../chains'
 
 function createHttpProviderFake<T>(mock: T): HttpProviderConnector {
     return {
